@@ -55,31 +55,32 @@ Includes role-based access for admin/staff and normal users.
 
 - Use Authorization: Bearer <access_token> for protected APIs
 # Installation & Setup
- **1. Clone the repo**
-        ```bash
-        git clone https://github.com/your-username/your-repo.git
-        cd your-repo
- **2. Create virtual environment**
-        ```bash
-        python -m venv venv
-        source venv/bin/activate   # Linux/Mac
-        venv\Scripts\activate      # Windows
+
+**1. Clone the repo**
+    ```bash
+    git clone https://github.com/your-username/your-repo.git
+    cd your-repo
+**2. Create virtual environment**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate   # Linux/Mac
+    venv\Scripts\activate      # Windows
 
 **3. Install dependencies**
-        ```bash
-        pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
 
 **4. Run migrations**
-        ```bash
-        python manage.py migrate
+    ```bash
+    python manage.py migrate
 
 **5. Create superuser**
-        ```bash
-        python manage.py createsuperuser
+    ```bash
+    python manage.py createsuperuser
 
 **6. Run server**
-        ```bash
-        python manage.py runserver
+    ```bash
+    python manage.py runserver
 
 # API Endpoints
 
