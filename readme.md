@@ -33,16 +33,17 @@ Includes role-based access for admin/staff and normal users.
 - Database: SQLite (default, can use PostgreSQL/MySQL)
 
 - Python: 3.10+
-# Project Structure
-app3monkeys/
-├── models.py
-├── serializers.py
-├── views.py
-├── urls.py
-├── permissions.py
-careerportal/
-├── settings.py
-├── urls.py
+**Project Structure**
+    ```bash
+        app3monkeys/
+        ├── models.py
+        ├── serializers.py
+        ├── views.py
+        ├── urls.py
+        ├── permissions.py
+        careerportal/
+        ├── settings.py
+        ├── urls.py
 
 # Authentication Flow
 
