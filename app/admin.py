@@ -29,3 +29,4 @@ class PatientAdmin(admin.ModelAdmin):
     search_fields = ('uhid', 'registration_no', 'relation_name', 'mobile_no', 'identity_no', 'insurance_no', 'referred_doctor')
     readonly_fields = ('created_at',)
     ordering = ('-created_at',)
+admin.site.register(DropdownOption)
