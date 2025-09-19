@@ -33,7 +33,6 @@ Includes role-based access for admin/staff and normal users.
 - Database: SQLite (default, can use PostgreSQL/MySQL)
 
 - Python: 3.10+
-
 **Project Structure**
     ```bash
         app3monkeys/
