@@ -1,30 +1,30 @@
-## Patient Management API
+# Patient Management API
 
 A Django REST Framework (DRF) project that manages patients, dropdown options, and authentication (register/login with JWT).
 Includes role-based access for admin/staff and normal users.
 
-## Features
+# Features
 
-# Authentication
+## Authentication
 - User registration with email & password
 - JWT-based login (access & refresh tokens)
 - Role-based access (Admin/User)
 
-# Patient Management
+## Patient Management
 - Add, update, delete, and view patient records
 - Normal users only see their own patients
 - Admins can view all patients
 
-# Dropdown Management
+## Dropdown Management
 - Admin can add dropdown values (blood group, relation, etc.)
 - Users can fetch dropdown values grouped by field name
 
-# Validation
+## Validation
 - Mobile number (10 digits, starts with 6–9)
 - Pin code (6 digits)
 - Date of birth (cannot be in future)
 
-## Tech Stack
+# Tech Stack
 
 - Backend: Django 5, Django REST Framework
 
@@ -33,7 +33,7 @@ Includes role-based access for admin/staff and normal users.
 - Database: SQLite (default, can use PostgreSQL/MySQL)
 
 - Python: 3.10+
-## Project Structure
+# Project Structure
 app3monkeys/
 ├── models.py
 ├── serializers.py
@@ -44,7 +44,7 @@ careerportal/
 ├── settings.py
 ├── urls.py
 
-## Authentication Flow
+# Authentication Flow
 
 - Register User → /api/register/
 
@@ -54,37 +54,37 @@ careerportal/
 
 - Use Authorization: Bearer <access_token> for protected APIs
 
-## Installation & Setup
+# Installation & Setup
 
-# 1. Clone the repo
+## 1. Clone the repo
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
 
-# 2. Create virtual environment
+## 2. Create virtual environment
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
 
-# 3. Install dependencies
+## 3. Install dependencies
 pip install -r requirements.txt
 
 # 4. Run migrations
 python manage.py migrate
 
-# 5. Create superuser
+## 5. Create superuser
 python manage.py createsuperuser
 
-# 6. Run server
+## 6. Run server
 python manage.py runserver
 
-## API Endpoints
+# API Endpoints
 
 - register API
 - login API
 - patients API
 - dropdownoptions API 
 
-##  Roles
+# Roles
 
 - Admin/Staff
 
@@ -96,7 +96,7 @@ python manage.py runserver
 
    - Can only see their submitted patients 
 
-##  Dependencies
+#  Dependencies
 
 Add this to your requirements.txt:
 
