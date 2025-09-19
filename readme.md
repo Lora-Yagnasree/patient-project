@@ -54,7 +54,6 @@ Includes role-based access for admin/staff and normal users.
 - Receive JWT tokens (access + refresh)
 
 - Use Authorization: Bearer <access_token> for protected APIs
-
 # Installation & Setup
  **1. Clone the repo**
         ```bash
