@@ -80,7 +80,7 @@ python manage.py createsuperuser
 
 **6. Run server**
     ```bash
-python manage.py runserver
+    python manage.py runserver ```
 
 # API Endpoints
 
