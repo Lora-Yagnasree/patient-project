@@ -3,7 +3,7 @@ services:
     name: projectpatient
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn projectpatient.wsgi:application
+    startCommand: gunicorn project.wsgi:application
     envVars:
       - key: DEBUG
         value: False
