@@ -32,20 +32,35 @@ from rest_framework import viewsets, permissions
 from .models import Patient
 from .serializers import PatientSerializer
 
+from rest_framework.decorators import action
+
 class PatientViewSet(viewsets.ModelViewSet):
     queryset = Patient.objects.all().order_by('-created_at')
     serializer_class = PatientSerializer
     permission_classes = [permissions.IsAuthenticated]
+
     def get_queryset(self):
         user = self.request.user
         if user.is_staff and user.is_superuser:
-            # Admin user: return all patients
             return Patient.objects.all().order_by('-created_at')
         else:
-            # Normal user: return only patients submitted by this user
             return Patient.objects.filter(submitted_by=user).order_by('-created_at')
+
     def perform_create(self, serializer):
         serializer.save(submitted_by=self.request.user)
+
+    @action(detail=False, methods=['get'], permission_classes=[permissions.IsAuthenticated])
+    def get_dropdowns(self, request):
+        """
+        Fetch dropdown options for normal users
+        """
+        data = {}
+        from .models import DropdownOption
+        for field, _ in DropdownOption.FIELD_CHOICES:
+            options = DropdownOption.objects.filter(field_name=field)
+            data[field] = [opt.value for opt in options]
+        return Response(data)
+
 User = get_user_model()
 class LoginViewSet(viewsets.ViewSet):
     serializer_class = LoginSerializer
